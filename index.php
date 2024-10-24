@@ -1,9 +1,14 @@
 <?php
 
 $basePath = '/Cloud Based Projects/Project';
-$uri = urldecode(parse_url($_SERVER['REQUEST_URI'])['path']);
-$uri = rtrim(str_replace($basePath, '', $uri), '/');
-$uri = preg_replace('/\.php$/', '', $uri);
+
+function getUriPath($basePath)
+{
+    $requestUri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+    return rtrim(preg_replace('/\.php$/', '', str_replace($basePath, '', $requestUri)), '/');
+}
+
+$uri = getUriPath($basePath);
 
 // echo "Parsed URI: $uri <br>";
 // var_dump($uri);
