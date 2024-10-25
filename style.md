@@ -1,6 +1,7 @@
 ## UI Inspiration
 https://dribbble.com/shots/23424744-Login-Page
 https://dribbble.com/shots/20867818-Modal-Sign-In
+https://www.sourcecodester.com/php/14243/open-source-clinic-management-system-php-full-source-code.html
 
 ## Colors
 https://colorhunt.co/palette/f6f4eb91c8e4749bc24682a9

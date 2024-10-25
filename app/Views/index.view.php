@@ -1,6 +1,6 @@
 <?php require 'partials/header.php' ?>
 
-    <div class="w-100 h-100 d-flex justify-content-center align-items-center text-center">
+    <div class="w-100 h-100 col-12 col-lg-10 col-md-8 d-flex justify-content-center align-items-center text-center">
         <div class="w-25 rounded-4 shadow p-4">
             <p>Don't have an account yet? <a href="register" class="link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Sign up</a></p>
             <form action="" method="post" class="d-flex flex-column gap-4">
@@ -14,7 +14,6 @@
                 </div>
                 <button type="submit" name="submit-btn" id="submit-btn" class="w-100 btn btn-primary" onclick="redirectLink()">Sign in</button>
             </form>
-            <span class="text-end d-block"><a href="forgot_password" class="link-dark link-offset-2 link-primary-hover link-underline-opacity-0 link-underline-opacity-100-hover">Forgot password?</a></span>
         </div>
     </div>
 

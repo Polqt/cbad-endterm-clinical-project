@@ -6,4 +6,4 @@ $title = 'Register';
 $global_style = 'public/styles/main.css';
 $style = 'public/styles/register.css';
 
-require 'app/Views/login/register.view.php';
+require 'app/Views/log/register.view.php';
