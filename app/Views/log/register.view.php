@@ -1,7 +1,7 @@
 <?php require 'app/Views/partials/header.php' ?>
 
 <div class="h-100 d-flex justify-content-center align-items-center">
-    <div class="w-50 text-start rounded-4 shadow p-5">
+    <div class="w-50 d-flex justify-content-center flex-column rounded-4 shadow p-4">
         <div class="text-center mb-4">
             <h1>Create an account</h1>
             <p>Already have an account? <a href="<?= BASE_URL ?>" class="link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Sign In</a></p>
