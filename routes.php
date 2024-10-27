@@ -10,6 +10,7 @@
 // Login Routes
 $router->get('/', 'app/Controllers/log/index.php');
 $router->get('/register', 'app/Controllers/log/register.php');
+$router->post('/register', 'app/Controllers/log/store.php'); 
 
 // Admin Routes
 $router->get('/admin/dashboard', 'app/Controllers/admin/dashboard.php');

@@ -1,4 +1,4 @@
-<?php require 'partials/header.php' ?>
+<?php require 'app/Views/partials/header.php' ?>
 
     <div class="w-100 h-100 col-12 col-lg-10 col-md-8 d-flex justify-content-center align-items-center text-center">
         <div class="w-25 rounded-4 shadow p-4">
@@ -17,4 +17,4 @@
         </div>
     </div>
 
-<?php require 'partials/footer.php' ?>
+<?php require 'app/Views/partials/footer.php' ?>
