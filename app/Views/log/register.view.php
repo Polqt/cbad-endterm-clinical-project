@@ -55,13 +55,15 @@ unset($_SESSION['old']);
                         <input class="form-control" type="password" name="confirm-password" id="confirm-password" autocomplete="password">
                     </div>
 
-                    <?php if (isset($errors['password_length'])): ?>
-                        <div class="text-danger fs-6"><?= $errors['password_length'] ?></div>
-                    <?php endif; ?>
+                    <div class="w-100 d-flex justify-content-center align-items-center text-nowrap text-danger">
+                        <?php if (isset($errors['password_length'])): ?>
+                            <p><?= $errors['password_length'] ?></p>
+                        <?php endif; ?>
 
-                    <?php if (isset($errors['password'])): ?>
-                        <div class="text-danger fs-6"><?= $errors['password'] ?></div>
-                    <?php endif; ?>
+                        <?php if (isset($errors['password'])): ?>
+                            <p><?= $errors['password'] ?></p>
+                        <?php endif; ?>
+                    </div>
                     <div class="w-100">
                         <button type="submit" name="submit-btn" id="submit-btn" class="w-100 btn btn-primary">Sign up</button>
                     </div>

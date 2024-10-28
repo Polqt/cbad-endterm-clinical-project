@@ -6,8 +6,6 @@ require 'app/Core/Validator.php';
 
 use Core\Validator;
 
-define('BASE_URL', '/Cloud Based Projects/Project');
-
 $first_name = $_POST['first-name'];
 $last_name = $_POST['last-name'];
 $username = $_POST['username'];

@@ -1,8 +1,6 @@
 <?php
 
 $title = 'Admin Dashboard';
-$icon = 'public/images/manager.png';
-$global_style = 'public/styles/main.css';
-$style = 'public/styles/admin/dashboard.css';
+$icon = BASE_URL . '/public/images/manager.png';
 
 require 'app/Views/admin/dashboard.view.php';

@@ -1,4 +1,4 @@
-<header class="col-12 col-lg-10 col-md-8 float-end p-2 shadow-sm" style="width: 90vw;">
+<header class="w-100 col-12 col-lg-10 col-md-8 float-end p-2 shadow-sm">
     <div class="container-fluid">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">

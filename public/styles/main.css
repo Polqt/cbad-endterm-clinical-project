@@ -8,3 +8,7 @@ body {
     width: 100%;
     font-family: "Figtree", sans-serif;
 }
+
+#sidebar {
+    width: 250px;
+}

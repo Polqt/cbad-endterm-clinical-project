@@ -1,9 +1,7 @@
 <?php
 
-define('BASE_URL', '/Cloud Based Projects/Project');
-
 $title = 'Register';
-$global_style = 'public/styles/main.css';
-$style = 'public/styles/register.css';
+$icon = '';
+$script = 'public/js/register.js';
 
 require 'app/Views/log/register.view.php';
