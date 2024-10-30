@@ -3,5 +3,5 @@
 use Core\Response;
 
 function urlIs($value) {
-    return $_SERVER['REQUEST_URI'] === $value;
+    return basename($_SERVER['SCRIPT_NAME']) === $value;
 }
