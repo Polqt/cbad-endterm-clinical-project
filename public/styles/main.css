@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #405D72;
-    --secondary-color: #758694;
-    --tertiary-color: #F7E7DC;
+    --primary-color: #C9F9FF;
+    --secondary-color: #1C7293;
+    --tertiary-color: #171D1C;
     --quaternary-color: #FFF8F3;
 }
 
@@ -14,9 +14,10 @@
 body {
     width: 100%;
     font-family: "Figtree", sans-serif;
+    background-color: var(--quaternary-color);
 }
 
 #sidebar {
     width: 250px;
-    background-color: var(--primary-color) !important;
+    background-color: var(--secondary-color) !important;
 }

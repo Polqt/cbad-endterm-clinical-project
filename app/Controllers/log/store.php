@@ -47,7 +47,7 @@ try {
         $stmt->bind_param('sssss', $first_name, $last_name, $username, $hashed_password, $role);
 
         if ($stmt->execute()) {
-            $_SESSION['success'] = "Registration successful!";
+            $_SESSION['success'] = "Kupal ka!";
             header('Location: ' . BASE_URL . '/');
             exit();
         } else {
