@@ -1,7 +1,6 @@
 <?php
 
-session_start();
-
+// session_start();
 require 'app/Database/connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

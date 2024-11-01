@@ -15,4 +15,5 @@
     <link rel="stylesheet" href="<?= $style ?>">
 </head>
 
-<body class="w-100 vh-100">
+<body>
+    <div class="d-flex vh-100">

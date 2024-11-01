@@ -17,7 +17,7 @@ body {
     background-color: var(--quaternary-color);
 }
 
-#sidebar {
+.sidebar {
     width: 250px;
-    background-color: var(--secondary-color) !important;
+    background-color: var(--secondary-color);
 }

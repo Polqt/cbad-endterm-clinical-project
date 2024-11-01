@@ -1,21 +1,29 @@
-<header class="w-100 col-12 col-lg-10 col-md-8 p-2 position-fixed shadow-sm">
+<nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm sticky-top">
     <div class="container-fluid">
-        <div class="d-flex flex-wrap align-items-center justify-content-end">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                
-            </a>
+        <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="d-flex gap-3">
+        <?php if (isset($_SESSION['user'])): ?>
+            <span class="text-muted fs-5">Hello, <span class="fw-bold"><?= $_SESSION['user']['first_name']; ?></span></span>
+        <?php endif; ?>
 
-                <div class="dropdown">
-                    <button class="btn border rounded-pill btn-dark d-flex align-items-center gap-1 dropdown-toggle px-3 py-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="<?= $user_logo ?>" alt="manager" width="25">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
-                    </ul>
-                </div>
+        <div class="ms-auto">
+            <div class="dropdown">
+                <button class="btn btn-outline-dark rounded-pill d-flex align-items-center gap-2 px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="<?= $user_logo ?>" alt="user" width="24" height="25" class="rounded-circle">
+                    <span class="d-none d-md-inline">Account</span>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
             </div>
         </div>
     </div>
-</header>
+</nav>
