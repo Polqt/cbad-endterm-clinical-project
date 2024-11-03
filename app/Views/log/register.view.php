@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require 'app/Views/partials/header.php';
 
 $errors = $_SESSION['errors'] ?? [];

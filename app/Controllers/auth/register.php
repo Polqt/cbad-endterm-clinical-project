@@ -2,6 +2,6 @@
 
 $title = 'Register';
 $icon = '';
-$script = 'public/js/register.js';
+$script = 'public/js/.js';
 
 require 'app/Views/log/register.view.php';

@@ -21,7 +21,7 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                    <li><a class="dropdown-item" href="<?= BASE_URL ?>/app/Controllers/auth/logout.php" onclick="handleLogout(); return false;">Logout</a></li>
                 </ul>
             </div>
         </div>

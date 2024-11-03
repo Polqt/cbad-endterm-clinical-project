@@ -8,10 +8,10 @@
 // ];
 
 // Login Routes
-$router->get('/', 'app/Controllers/log/index.php');
-$router->post('/', 'app/Controllers/log/index.php');
-$router->get('/register', 'app/Controllers/log/register.php');
-$router->post('/register', 'app/Controllers/log/store.php'); 
+$router->get('/', 'app/Controllers/auth/login.php');
+$router->post('/', 'app/Controllers/auth/login.php');
+$router->get('/register', 'app/Controllers/auth/register.php');
+$router->post('/register', 'app/Controllers/auth/store.php'); 
 
 // Admin Routes
 $router->get('/admin/dashboard', 'app/Controllers/admin/dashboard.php');
