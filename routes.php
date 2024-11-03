@@ -11,14 +11,15 @@
 $router->get('/', 'app/Controllers/auth/login.php');
 $router->post('/', 'app/Controllers/auth/login.php');
 $router->get('/register', 'app/Controllers/auth/register.php');
-$router->post('/register', 'app/Controllers/auth/store.php'); 
+$router->post('/register', 'app/Controllers/auth/store.php');
 
 // Admin Routes
 $router->get('/admin/dashboard', 'app/Controllers/admin/dashboard.php');
-$router->get('/admin/services', 'app/Controllers/admin/services.php');
-$router->get('/admin/history', 'app/Controllers/admin/history.php');
+$router->get('/admin/patient-records', 'app/Controllers/admin/patient_records.php');
+$router->get('/admin/register-patient', 'app/Controllers/admin/register_patient.php');
+$router->get('/admin/profile', 'app/Controllers/admin/profile.php');
 
 // Client/User Routes
-$router->get('/user/dashboard', 'app/Controllers/client/dashboard.php');
-$router->get('/user/services', 'app/Controllers/client/services.php');
-$router->get('/user/history', 'app/Controllers/client/history.php');
+$router->get('/user/dashboard', controller: 'app/Controllers/client/dashboard.php');
+$router->get('/user/medical-history', 'app/Controllers/client/medical_history.php');
+$router->get('/user/profile', 'app/Controllers/client/profile.php');

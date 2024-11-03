@@ -36,14 +36,16 @@ Admins have access to the following functionalities:
   - **Prescribed Medication**
   - **Check-up Date**
 
+- **Admin Profile**: Allows admin to view there credentials and profile.
+
 ### Client Side
 
 Clients (patients) can access the following features:
 
 - **Login**: Clients can log in to view their records securely.
-- **Check-Up Details**: Clients can view detailed information from each visit.
 - **Medical History**: Access to a history of check-ups, including past diagnoses, treatments, and prescriptions.
 - **Registration (Admin-Only)**: While clients cannot register directly, admins can register clients in the system, granting them access to the client portal.
+- **Client Profile**: Allows client to view there credentials and profile.
 
 ## Tech Stack
 
