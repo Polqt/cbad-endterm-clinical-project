@@ -1,20 +1,20 @@
 <?php require 'app/Views/partials/header.php' ?>
 
-<div class="w-100 h-100 col-12 col-lg-10 col-md-8 d-flex justify-content-center align-items-center text-center">
-    <div class="w-25 rounded-4 shadow p-4">
+<div class="w-100 col-12 col-lg-10 col-md-8 d-flex justify-content-center align-items-center text-center">
+    <div class="w-25 rounded-4 shadow p-4 text-bg-light">
         <?php
-            if (isset($_SESSION['success'])) {
-                echo '<div class="alert alert-success">' . $_SESSION['success'] . '</div>';
-                unset($_SESSION['success']);
-            }
+        if (isset($_SESSION['success'])) {
+            echo '<div class="alert alert-success">' . $_SESSION['success'] . '</div>';
+            unset($_SESSION['success']);
+        }
 
-            if (isset($_SESSION['errors'])) {
-                foreach ($_SESSION['errors'] as $error) {
-                    echo '<div class="alert alert-danger">' . $error . '</div>';
-                }
-                unset($_SESSION['errors']);
+        if (isset($_SESSION['errors'])) {
+            foreach ($_SESSION['errors'] as $error) {
+                echo '<div class="alert alert-danger">' . $error . '</div>';
             }
-        ?> 
+            unset($_SESSION['errors']);
+        }
+        ?>
         <p>Don't have an account yet? <a href="register" class="link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Sign up</a></p>
         <form action="" method="POST" class="d-flex flex-column gap-4">
             <div class="form-floating">
@@ -26,7 +26,14 @@
                 <label for="floatingPassword">Password</label>
             </div>
 
-            
+            <div class="form-group mb-2">
+                <select class="form-select" name="role" required>
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="User">User</option>
+                    <option value="Admin">Admin</option>
+                </select>
+            </div>
+
             <button type="submit" name="submit-btn" id="submit-btn" class="w-100 btn btn-primary">Sign in</button>
         </form>
     </div>

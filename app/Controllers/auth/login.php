@@ -6,6 +6,7 @@ require 'app/Database/connect.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $role = $_POST['role'];
     $errors = [];
 
 
@@ -17,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if(empty($errors)) {
         try {
-            $sql = "SELECT * FROM user_registration WHERE username = ?";
+            $sql = "SELECT * FROM user_registration WHERE username = ? AND role = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param('s', $username);
+            $stmt->bind_param('ss', $username, $role);
             $stmt->execute();
             $result = $stmt->get_result();
 
@@ -40,10 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     header('Location: ' . BASE_URL . $redirect);
                     exit();
                 } else {
-                    $errors['login'] = "Invalid username or password.";
+                    $errors['login'] = "Invalid password or role.";
                 } 
             } else {
-                $errors['login'] = "Invalid username or password.";
+                $errors['login'] = "Diin mo na nakwa nga username ya?";
             }
         } catch (Exception $e) {
             $errors['database'] = "Database error: " . $e->getMessage();
