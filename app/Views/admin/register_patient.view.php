@@ -36,11 +36,10 @@
             <!-- Gender -->
             <div class="col-sm-6">
                 <label for="sex" class="form-label">Sex</label>
-                <select class="form-select" id="sex" name="sex" required>
-                    <option value="">Choose...</option>
+                <select class="form-select" name="sex" required>
+                    <option value="" disabled selected>Choose...</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
-                    <option value="other">Other</option>
                 </select>
                 <div class="invalid-feedback">
                     Please select a valid gender.

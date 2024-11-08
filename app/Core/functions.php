@@ -89,22 +89,26 @@ function getMenuItems()
             [
                 'title' => 'Dashboard',
                 'url' => getDashboardUrl(),
-                'icon' => $icons['dashboard']
+                'icon' => $icons['dashboard'],
+                'active' => urlIs(getDashboardUrl())
             ],
             [
                 'title' => 'Register Patient',
                 'url' => getRegisterPatientUrl(),
-                'icon' => $icons['register']
+                'icon' => $icons['register'],
+                'active' => urlIs(getRegisterPatientUrl())
             ],
             [
                 'title' => 'Patient Records',
                 'url' => getPatientsUrl(),
-                'icon' => $icons['patients']
+                'icon' => $icons['patients'],
+                'active' => urlIs(getPatientsUrl())
             ],
             [
                 'title' => 'Profile',
                 'url' => getProfileUrl(),
-                'icon' => $icons['profile']
+                'icon' => $icons['profile'],
+                'active' => urlIs(getProfileUrl())
             ]
         ];
     } else {
@@ -112,17 +116,20 @@ function getMenuItems()
             [
                 'title' => 'Dashboard',
                 'url' => getDashboardUrl(),
-                'icon' => $icons['dashboard']
+                'icon' => $icons['dashboard'],
+                'active' => urlIs(getDashboardUrl())
             ],
             [
                 'title' => 'Medical History',
                 'url' => getMedicalHistoryUrl(),
-                'icon' => $icons['medical-history']
+                'icon' => $icons['medical-history'],
+                'active' => urlIs(getMedicalHistoryUrl())
             ],
             [
                 'title' => 'Profile',
                 'url' => getProfileUrl(),
-                'icon' => $icons['profile']
+                'icon' => $icons['profile'],
+                'active' => urlIs(getProfileUrl())
             ]
         ];
     }
