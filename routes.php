@@ -17,7 +17,10 @@ $router->post('/register', 'app/Controllers/auth/store.php');
 $router->get('/admin/dashboard', 'app/Controllers/admin/dashboard.php');
 $router->get('/admin/patient-records', 'app/Controllers/admin/patient_records.php');
 $router->get('/admin/register-patient', 'app/Controllers/admin/register_patient.php');
+$router->post('/admin/register-patient', 'app/Controllers/admin/register_patient.php');
 $router->get('/admin/profile', 'app/Controllers/admin/profile.php');
+$router->post('/admin/update-patient', 'app/Controllers/admin/update_patient.php');
+$router->post('/admin/delete-patient', 'app/Controllers/admin/delete_patient.php');
 
 // Client/User Routes
 $router->get('/user/dashboard', controller: 'app/Controllers/client/dashboard.php');

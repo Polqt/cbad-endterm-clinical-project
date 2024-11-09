@@ -1,8 +1,5 @@
 <?php
 
-session_start();
+require_once BASE_URL . '/app/Middleware/Auth.php';
 
-if (isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'user') {
-    header('Location: '. BASE_URL . '/');
-    exit();
-};
+Auth::checkUser();

@@ -37,8 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     ];
 
                     // Basta kung ano role mo pag sign up, te kung mag log in ka ma redirect based sa imo role e.
+                    header("Cache-Control: no-cache, no-store, must-revalidate");
+                    header("Pragma: no-cache");
+                    header("Expires: 0");
                     $redirect = $user['role'] === 'admin' ? '/admin/dashboard' : '/user/dashboard';
-                    header('Location: ' . BASE_URL . $redirect);
+                    header(header: 'Location: ' . BASE_URL . $redirect);
                     exit();
                 } else {
                     $errors['login'] = "Invalid password or role.";
@@ -57,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: ' . BASE_URL . '/');
         exit();
     }
-} 
+}
 
 $title = 'Login';
 $icon = 'public/images/login.png';
