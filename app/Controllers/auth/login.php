@@ -1,6 +1,5 @@
 <?php
 
-// session_start();
 require 'app/Database/connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -8,13 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
     $role = $_POST['role'];
     $errors = [];
-
-
-    // Kabahol nga matabo naka required to, ano ko mango? padungag dungag lang linya ka code.
-    // if (empty($username) || empty($password)) {
-    //     $errors['login'] = "Please enter username and password."; 
-
-    // }
 
     if(empty($errors)) {
         try {
@@ -34,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         'first_name' => $user['first_name'],
                         'last_name' => $user['last_name'],
                         'role' => $user['role'],
+                        'created_at' => $user['created_at']
                     ];
 
                     // Basta kung ano role mo pag sign up, te kung mag log in ka ma redirect based sa imo role e.

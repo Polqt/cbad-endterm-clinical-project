@@ -8,7 +8,7 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="patient_id" value="<?= $patient['id'] ?>">
-                    <p>Are you sure you want to delete patient record for <strong><?= htmlspecialchars($patient['first_name'] . ' ' . $patient['last_name']) ?></strong>?</p>
+                    <p>Are you sure you want to delete patient record for <strong><?= $patient['first_name'] . ' ' . $patient['last_name'] ?></strong>?</p>
                     <p class="text-danger"><small>This action cannot be undone.</small></p>
                 </div>
                 <div class="modal-footer">
