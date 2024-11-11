@@ -15,6 +15,7 @@
             unset($_SESSION['errors']);
         }
         ?>
+        <img src="<?= BASE_URL ?>/public/images/climan_logo.png" alt="" width="250" class="m-3">
         <p>Don't have an account yet? <a href="register" class="link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Sign up</a></p>
         <form action="" method="POST" class="d-flex flex-column gap-4">
             <div class="form-floating">
