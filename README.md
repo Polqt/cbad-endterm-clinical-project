@@ -1,6 +1,6 @@
-# Clinica De Pota
+# Climan
 
-Clinica De Pota is a streamlined clinic management system developed as an end-term project for the **Cloud-Based Applications Development** course. The system is designed to help clinic staff manage patient records efficiently and allow clients to access their medical history. 
+Climan is a streamlined clinic management system developed as an end-term project for the **Cloud-Based Applications Development** course. The system is designed to help clinic staff manage patient records efficiently and allow clients to access their medical history. 
 
 ## Project Team
 
