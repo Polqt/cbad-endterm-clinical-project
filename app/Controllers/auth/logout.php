@@ -1,6 +1,5 @@
 <?php
 define('BASE_URL', '/Cloud Based Projects/Project');
-session_start();
 
 // Clear all session variables
 $_SESSION = array();

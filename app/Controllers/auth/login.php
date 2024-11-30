@@ -1,5 +1,4 @@
 <?php
-
 require 'app/Database/connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -8,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $role = $_POST['role'];
     $errors = [];
 
-    if(empty($errors)) {
+    if (empty($errors)) {
         try {
             $sql = "SELECT * FROM user_registration WHERE username = ? AND role = ?";
             $stmt = $conn->prepare($sql);
@@ -19,35 +18,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($result->num_rows === 1) {
                 $user = $result->fetch_assoc();
 
+                // Verify password
                 if (password_verify($password, $user['password'])) {
+                    // Clear any previous errors
+                    if (isset($_SESSION['errors'])) {
+                        unset($_SESSION['errors']);
+                    }
+
+                    // Set user session
                     $_SESSION['user'] = [
-                        'id' => $user['id'],
+                        'user_id' => $user['user_id'],  // Use user_id instead of id
                         'username' => $user['username'],
                         'first_name' => $user['first_name'],
                         'last_name' => $user['last_name'],
-                        'role' => $user['role'],
-                        'created_at' => $user['created_at']
+                        'role' => $user['role']
                     ];
 
-                    // Basta kung ano role mo pag sign up, te kung mag log in ka ma redirect based sa imo role e.
+                    // Prevent caching of login pages
                     header("Cache-Control: no-cache, no-store, must-revalidate");
                     header("Pragma: no-cache");
                     header("Expires: 0");
+
+                    // Redirect based on role
                     $redirect = $user['role'] === 'admin' ? '/admin/dashboard' : '/user/dashboard';
-                    header(header: 'Location: ' . BASE_URL . $redirect);
+                    header('Location: ' . BASE_URL . $redirect);
                     exit();
                 } else {
-                    $errors['login'] = "Invalid password or role.";
-                } 
+                    $errors['login'] = "Invalid username, password, or role.";
+                }
             } else {
-                $errors['login'] = "Diin mo na nakwa nga username ya?";
+                $errors['login'] = "User not found.";
             }
         } catch (Exception $e) {
             $errors['database'] = "Database error: " . $e->getMessage();
-            error_log("Exception: " . $e->getMessage());
+            error_log("Login Exception: " . $e->getMessage());
         }
     }
 
+    // If there are errors, store them in session and redirect
     if (!empty($errors)) {
         $_SESSION['errors'] = $errors;
         header('Location: ' . BASE_URL . '/');

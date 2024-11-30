@@ -32,14 +32,24 @@
                                     <td><?= htmlspecialchars($record['prescribed_medication']) ?></td>
                                     <td>
                                         <span class="badge d-flex justify-content-center align-items-center <?= getStatusBadgeClass($record['status']) ?>">
-                                            <?= $record['status'] ?>
+                                            <?= htmlspecialchars($record['status']) ?>
                                         </span>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         <?php else: ?>
                             <tr>
-                                <td colspan="4" class="text-center">No medical records found</td>
+                                <td colspan="4" class="text-center">
+                                    <div class="alert alert-info">
+                                        <?php
+                                        if (!empty($search)) {
+                                            echo "No records found matching your search: " . htmlspecialchars($search);
+                                        } else {
+                                            echo "No medical records found for this user.";
+                                        }
+                                        ?>
+                                    </div>
+                                </td>
                             </tr>
                         <?php endif; ?>
                     </tbody>
@@ -49,17 +59,5 @@
     </div>
 </div>
 
-<?php
-function getStatusBadgeClass($status)
-{
-    return match ($status) {
-        'Active' => 'bg-success',
-        'Discharged' => 'bg-warning',
-        'Deceased' => 'bg-danger',
-        'Transferred' => 'bg-info',
-        default => 'bg-secondary'
-    };
-}
-?>
 
 <?php require 'app/Views/partials/footer.php' ?>

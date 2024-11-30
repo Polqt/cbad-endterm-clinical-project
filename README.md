@@ -71,6 +71,3 @@ The system is developed using:
 ---
 
 This project provides a foundational clinic management system with basic CRUD capabilities, focusing on administrative efficiency and client record accessibility.
-
-
-MA ADD KO DI ERD KAG ANO PA MAN?
