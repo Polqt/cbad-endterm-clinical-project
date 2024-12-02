@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     // Set user session
                     $_SESSION['user'] = [
-                        'user_id' => $user['user_id'],  // Use user_id instead of id
+                        'user_id' => $user['user_id'],  
                         'username' => $user['username'],
                         'first_name' => $user['first_name'],
                         'last_name' => $user['last_name'],
