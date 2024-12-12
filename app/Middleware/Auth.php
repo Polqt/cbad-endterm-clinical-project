@@ -3,6 +3,7 @@ class Auth
 {
     public static function checkAuth()
     {
+        session_start();
         if (!isset($_SESSION['user'])) {
             self::redirectToLogin();
         }
@@ -17,7 +18,7 @@ class Auth
 
     public static function checkUser()
     {
-        if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'client') {
+        if (!isset($_SESSION['user']) || $_SESSION['user']['role'] == 'client') {
             self::redirectToLogin();
         }
     }

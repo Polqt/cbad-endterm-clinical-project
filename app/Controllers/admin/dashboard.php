@@ -41,6 +41,22 @@ $recentPatientsQuery = "
     
 $recentPatients = $conn->query($recentPatientsQuery);
 
+// Fetch disease prevalence by month
+$diseasePrevalenceQuery = "
+    SELECT 
+        DATE_FORMAT(created_at, '%Y-%m') AS month, 
+        diagnosis, 
+        COUNT(*) AS count
+    FROM patient_registration
+    GROUP BY month, diagnosis
+    ORDER BY month, count DESC
+";
+$diseasePrevalenceResult = $conn->query($diseasePrevalenceQuery);
+
+$diseasePrevalenceData = [];
+while ($row = $diseasePrevalenceResult->fetch_assoc()) {
+    $diseasePrevalenceData[] = $row;
+}
 
 // Helper function for status badge classes
 function getStatusBadgeClass($status)
@@ -52,6 +68,26 @@ function getStatusBadgeClass($status)
         'Transferred' => 'bg-info',
         default => 'bg-secondary'
     };
+}
+
+$diseaseQuery = "
+        SELECT 
+            diagnosis, 
+            COUNT(*) as count 
+        FROM patient_registration 
+        WHERE status = 'Active' 
+        GROUP BY diagnosis 
+        ORDER BY count DESC 
+        LIMIT 10
+    ";
+$diseaseResult = $conn->query($diseaseQuery);
+
+$diagnoses = [];
+$counts = [];
+
+while ($row = $diseaseResult->fetch_assoc()) {
+    $diagnoses[] = $row['diagnosis'];
+    $counts[] = $row['count'];
 }
 
 require 'app/Views/admin/dashboard.view.php';
