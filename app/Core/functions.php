@@ -2,8 +2,6 @@
 
 session_start();
 
-use Core\Response;
-
 function urlIs($value)
 {
     $currentUrl = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -35,7 +33,6 @@ function getDashboardUrl()
     return $urls['dashboard'];
 }
 
-
 function getRegisterPatientUrl()
 {
     $urls = getRolesBasedUrls();
@@ -47,7 +44,6 @@ function getPatientsUrl()
     $urls = getRolesBasedUrls();
     return $urls['patient_records'];
 }
-
 
 function getMedicalHistoryUrl()
 {

@@ -10,8 +10,8 @@
 
         <div class="ms-auto">
             <div class="dropdown">
-                <button class="btn btn-outline-dark rounded-2 d-flex align-items-center dropdown-toggle gap-2 px-3 py-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="<?= $user_logo ?>" alt="user" width="24" height="25" class="rounded-circle">
+                <button class="btn d-flex align-items-center dropdown-toggle gap-2 px-3 py-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="<?= $user_logo ?>" alt="user" width="36" height="36">
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item" href="<?= BASE_URL ?>/app/Controllers/">Profile</a></li>

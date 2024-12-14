@@ -13,7 +13,6 @@ $totalPatients = $conn->query($totalPatientsQuery)->fetch_assoc()['total'];
 // Fetch status counts
 $statusQuery = "SELECT status, COUNT(*) as count FROM patient_registration GROUP BY status";
 $statusResult = $conn->query($statusQuery);
-$statusCounts = [];
 while ($row = $statusResult->fetch_assoc()) {
     $statusCounts[$row['status']] = $row['count'];
 }
@@ -21,7 +20,6 @@ while ($row = $statusResult->fetch_assoc()) {
 // Fetch gender distribution
 $genderQuery = "SELECT gender, COUNT(*) as count FROM patient_registration GROUP BY gender";
 $genderResult = $conn->query($genderQuery);
-$genderCounts = [];
 while ($row = $genderResult->fetch_assoc()) {
     $genderCounts[strtolower($row['gender'])] = $row['count'];
 }
@@ -78,7 +76,6 @@ $diseaseQuery = "
         WHERE status = 'Active' 
         GROUP BY diagnosis 
         ORDER BY count DESC 
-        LIMIT 10
     ";
 $diseaseResult = $conn->query($diseaseQuery);
 

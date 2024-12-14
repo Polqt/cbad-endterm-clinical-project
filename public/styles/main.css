@@ -22,3 +22,53 @@ body {
     background-color: var(--secondary-color);
 }
 
+
+.card-footer {
+    background-color: rgba(0,0,0,0.03) !important;
+}
+
+.list-group-item {
+    transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.badge-active {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.bg-primary-soft {
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+.badge-pink {
+    background-color: #FF69B4;
+    color: white;
+}
+
+.bg-pink-soft {
+    background-color: rgba(255, 105, 180, 0.1);
+    color: #FF69B4;
+}
+
+.card-metric {
+    transition: all 0.3s ease;
+}
+
+.card-metric:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.chart-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.is-valid {
+    background-image: none !important; /* Removes green check icon */
+}
