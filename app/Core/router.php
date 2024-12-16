@@ -45,7 +45,7 @@ class Router
                     }
                 }
                 // Load the controller
-                return require base_path($route['controller']);
+                return require BASE_PATH($route['controller']);
             }
         }
 

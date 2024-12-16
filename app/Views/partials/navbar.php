@@ -14,11 +14,6 @@
                     <img src="<?= $user_logo ?>" alt="user" width="36" height="36">
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="<?= BASE_URL ?>/app/Controllers/">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
                     <li><a class="dropdown-item" href="<?= BASE_URL ?>/app/Controllers/auth/logout.php" onclick="handleLogout(); return false;">Logout</a></li>
                 </ul>
             </div>

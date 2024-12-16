@@ -15,7 +15,7 @@
             unset($_SESSION['errors']);
         }
         ?>
-        <img src="<?= BASE_URL ?>/public/images/climan_logo.png" alt="" width="250" class="m-3">
+        <img src="<?= BASE_URL ?>/public/images/nyan-cat.gif" alt="" width="250" class="m-3">
         <p>Don't have an account yet? <a href="register" class="link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Sign up</a></p>
         <form action="" method="POST" class="d-flex flex-column gap-4">
             <div class="form-floating">
@@ -26,15 +26,6 @@
                 <input class="form-control" id="floatingPassword" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
                 <label for="floatingPassword">Password</label>
             </div>
-
-            <div class="form-group mb-2">
-                <select class="form-select" name="role" required>
-                    <option value="" disabled selected>Select Role</option>
-                    <option value="User">User</option>
-                    <option value="Admin">Admin</option>
-                </select>
-            </div>
-
             <button type="submit" name="submit-btn" id="submit-btn" class="w-100 btn btn-primary">Sign in</button>
         </form>
     </div>

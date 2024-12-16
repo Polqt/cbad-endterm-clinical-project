@@ -19,7 +19,7 @@ function getRolesBasedUrls()
     $userRole = $_SESSION['user']['role'] ?? null;
 
     return [
-        'dashboard' => $userRole === 'admin' ? '/admin/dashboard' : '/user/dashboard',
+        'dashboard' => $userRole === 'admin' ? '/admin/dashboard' : '/user/medical-history',
         'register_patient' => '/admin/register-patient',
         'patient_records' => '/admin/patient-records',
         'medical_history' => '/user/medical-history',
@@ -33,6 +33,7 @@ function getDashboardUrl()
     return $urls['dashboard'];
 }
 
+
 function getRegisterPatientUrl()
 {
     $urls = getRolesBasedUrls();
@@ -44,6 +45,7 @@ function getPatientsUrl()
     $urls = getRolesBasedUrls();
     return $urls['patient_records'];
 }
+
 
 function getMedicalHistoryUrl()
 {
@@ -109,12 +111,6 @@ function getMenuItems()
         ];
     } else {
         return [
-            [
-                'title' => 'Dashboard',
-                'url' => getDashboardUrl(),
-                'icon' => $icons['dashboard'],
-                'active' => urlIs(getDashboardUrl())
-            ],
             [
                 'title' => 'Medical History',
                 'url' => getMedicalHistoryUrl(),

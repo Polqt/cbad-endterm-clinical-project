@@ -1,13 +1,13 @@
 <?php
+session_start();
 define('BASE_URL', '/Cloud Based Projects/Project');
 
-// Clear all session variables
-$_SESSION = array();
+$_SESSION = [];
 
-// Destroy the session
 session_destroy();
 
-// Set cache control headers
+session_regenerate_id(true);
+
 header("Cache-Control: no-cache, no-store, must-revalidate");
 header("Pragma: no-cache");
 header("Expires: 0");

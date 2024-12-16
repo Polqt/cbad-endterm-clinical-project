@@ -54,6 +54,7 @@
                             <textarea class="form-control" id="diagnosis<?= $patient['id'] ?>"
                                 name="diagnosis" rows="3"
                                 data-original-value="<?= htmlspecialchars($patient['diagnosis']) ?>" required>
+                                <?= htmlspecialchars($patient['diagnosis']) ?>
                             </textarea>
                         </div>
 
@@ -62,6 +63,7 @@
                             <textarea class="form-control" id="medication<?= $patient['id'] ?>"
                                 name="medication" rows="3"
                                 data-original-value="<?= htmlspecialchars($patient['prescribed_medication']) ?>" required>
+                                <?= htmlspecialchars($patient['prescribed_medication']) ?>
                             </textarea>
                         </div>
 

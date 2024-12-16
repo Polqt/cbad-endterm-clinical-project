@@ -36,7 +36,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Active Patients -->
         <div class="col-12 col-md-6 col-md-3">
             <div class="card card-metric border-0 shadow-sm h-100 overflow-hidden">
@@ -63,33 +62,39 @@
         </div>
 
         <!-- Gender Distribution -->
-        <div class="col-12 col-sm-6 col-md-3">
+        <div class="col-12 col-md-6 col-sm-3">
             <div class="card card-metric border-0 shadow-sm h-100 overflow-hidden">
                 <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
                     <h5 class="mb-0">Gender Distribution</h5>
                 </div>
                 <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <div class="d-flex align-items-center">
-                            <div class="rounded-circle bg-primary text-white p-2 me-3 d-flex align-items-center justify-content-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" fill="currentColor" class="bi bi-gender-male">
-                                    <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8" />
-                                </svg>
+                    <div class="row">
+                        <div class="col-6 text-center">
+                            <div class="p-3 bg-primary-soft rounded mb-3">
+                                <div class="d-flex justify-content-center mb-2">
+                                    <div class="rounded-circle bg-primary text-white p-3 d-flex align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" fill="currentColor" class="bi bi-gender-male">
+                                            <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h6 class="mb-1 fw-bold">Male</h6>
+                                <div class="h4 mb-0 text-primary"><?= $genderCounts['male'] ?></div>
                             </div>
-                            <span class="fw-bold">Male</span>
                         </div>
-                        <span class="badge bg-primary-soft text-primary"><?= $genderCounts['male'] ?></span>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <div class="d-flex align-items-center">
-                            <div class="rounded-circle badge-pink text-white p-2 me-3 d-flex align-items-center justify-content-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" fill="currentColor" class="bi bi-gender-female">
-                                    <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5" />
-                                </svg>
+                        <div class="col-6 text-center">
+                            <div class="p-3 bg-pink-soft rounded mb-3">
+                                <div class="d-flex justify-content-center mb-2">
+                                    <div class="rounded-circle badge-pink text-white p-3 d-flex align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" fill="currentColor" class="bi bi-gender-female">
+                                            <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h6 class="mb-1 fw-bold">Female</h6>
+                                <div class="h4 mb-0 text-pink"><?= $genderCounts['female'] ?></div>
                             </div>
-                            <span class="fw-bold">Female</span>
                         </div>
-                        <span class="badge bg-pink-soft text-pink"><?= $genderCounts['female'] ?></span>
                     </div>
                     <div class="progress" style="height: 10px;">
                         <div class="progress-bar bg-primary" role="progressbar"
@@ -167,7 +172,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="progress mt-3" style="height: 10px;">
                         <?php
                         $totalPatients = array_sum($statusCounts);

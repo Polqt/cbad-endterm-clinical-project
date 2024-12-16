@@ -70,5 +70,22 @@ body {
 }
 
 .is-valid {
-    background-image: none !important; /* Removes green check icon */
+    border-color: inherit !important; 
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.075);
+    transition: background-color 0.3s ease;
+}
+
+.btn-sm i {
+    font-size: 0.8rem;
+}
+
+#searchInput {
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }

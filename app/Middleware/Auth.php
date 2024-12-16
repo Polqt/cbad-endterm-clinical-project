@@ -18,7 +18,7 @@ class Auth
 
     public static function checkUser()
     {
-        if (!isset($_SESSION['user']) || $_SESSION['user']['role'] == 'client') {
+        if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'user') {
             self::redirectToLogin();
         }
     }
